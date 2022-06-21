@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <script src="./js/script.js" type="module"></script>
+    <title>García RPP Laboratorio III</title>
+  </head>
+  <body>
+    <header>
+      <img class="header-logo" src="./images/logo.png" alt="logo-autos" />
+      <nav>
+        <ul class="nav-items">
+          <li><a href="anuncios.html">Nosotros</a></li>
+          <li><a href="index.html">Anuncio</a></li>
+          <li><a href="anuncios.html">Blog</a></li>
+          <li><a href="anuncios.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-encabezado">
+        <h2>Administración</h2>
+        <img src="./images/autos.png" id="imagenPrincipal" class="imagen-encabezado"/>
+      </div>
+
+      <form action="" class="centrar">
+
+        <fieldset>
+          <legend>Informacion del Anuncio</legend>
+          <h3>TITULO:</h3>
+          <input type="text" name="titulo" placeholder="Titulo" id="txtTitulo" required/>
+
+          <h3>TRANSACCION:</h3>
+          <div class="radioInput">
+            <label for="venta">VENTA</label>
+            <input type="radio" name="transaccion" value="venta" id="venta" checked />
+            <label for="alquiler">ALQUILER</label>
+            <input type="radio" name="transaccion" value="alquiler" id="alquiler" />
+          </div>
+
+          <h3>DESCRIPCION:</h3>
+          <input type="text" name="descripcion" placeholder="Descripcion" id="txtDescripcion" required />
+          
+          <h3>CARACTERÍSTICAS AGREGADAS:</h3>
+          <div class="radioInput" id="caracteristicas">
+            <label for="asientos_cuero">ASIENTOS DE CUERO</label>
+            <input type="checkbox" name="asientos_cuero" id="asientos_cuero" />
+            <label for="aire">AIRE ACONDICIONADO</label>
+            <input type="checkbox" name="aire" id="aire" />
+            <label for="polarizado">POLARIZADO</label>
+            <input type="checkbox" name="polarizado" id="polarizado" />
+          </div>
+
+          <h3>PRECIO:</h3>
+          <input type="number" name="precio" placeholder="Precio" id="txtPrecio" step="0.1" min="1" required />
+
+
+          <div class="contenedor-camposChicos">
+            <div class="centrarCampo">
+              <img src="./images/puertas.png" alt="Imagen de Puertas">
+              <input type="number" name="puertas" placeholder="Puertas" id="txtPuertas" min="1" required/>
+            </div>
+            <div class="centrarCampo">
+              <img src="./images/kilometros.png" alt="Imagen de Kilometros">
+              <input type="number" name="kms" placeholder="Kms" id="txtKms" min="0" required />
+            </div>
+            <div class="centrarCampo">
+              <img src="./images/potencia.png" alt="Imagen de Potencia">
+              <input type="number" name="potencia" placeholder="Potencia" id="txtPotencia" min="1" required />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="contenedor-camposChicos">
+          <button type="submit"  class="boton centrarCampo" id="btnGuardar">
+            <img src="./images/guardar.png" alt="Imagen de Guardar">
+            Guardar
+          </button>
+          <button type="submit" class="boton centrarCampo ocultar" id="btnModificar">
+            <img src="./images/editar.png" alt="Imagen de Guardar">
+            Modificar
+          </button>
+          <button type="button" class="boton centrarCampo ocultar" id="btnEliminar">
+            <img src="./images/eliminar.png" alt="Imagen de Guardar">
+            Eliminar
+          </button>
+          <button type="reset" class="boton centrarCampo" id="btnCancelar">
+            <img src="./images/cancel.png" alt="Imagen de Guardar" id="btnCancelar">
+            Cancelar
+          </button>
+          <input type="hidden" name="anuncioID" value=""/>
+        </div>
+      </form>
+      
+      <div id="contenedor-spinner" class="centrar"></div>
+      <section id="contenedor-tabla" class="centrar">
+        <div id="tabla_anuncios"></div>
+      </section>
+
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="nav-items">
+          <li><a href="anuncios.html">Nosotros</a></li>
+          <li><a href="index.html">Anuncio</a></li>
+          <li><a href="anuncios.html">Blog</a></li>
+          <li><a href="anuncios.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p>Todos los derechos reservados - Jorge García <date>2022</date>&copy;</p>
+    </footer>
+    
+  </body>
+</html>
